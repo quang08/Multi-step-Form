@@ -1,8 +1,8 @@
 import { FormEvent, useState } from "react";
-import { AccountForm } from "./AccountForm";
-import { AddressForm } from "./AddressForm";
+import { AccountForm } from "../components/AccountForm";
+import { AddressForm } from "../components/AddressForm";
 import { useMultistepForm } from "./useMultistepForm";
-import { UserForm } from "./UserForm";
+import { UserForm } from "../components/UserForm";
 
 type FormData = {
   firstName: string;
@@ -48,7 +48,7 @@ function App() {
 
   function onSubmit(e: FormEvent) {
     e.preventDefault();
-    if(!isLastStep) return next();
+    if (!isLastStep) return next();
     alert("Signed Up Successfully!");
   }
   return (
@@ -61,7 +61,7 @@ function App() {
         margin: "1rem",
         borderRadius: ".5rem",
         fontFamily: "Arial",
-        maxWidth: 'max-content'
+        maxWidth: "max-content",
       }}
     >
       <form onSubmit={onSubmit}>

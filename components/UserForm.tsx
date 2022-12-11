@@ -1,4 +1,4 @@
-import { FormWrapper } from "./FormWrapper";
+import {FormWrapper} from "../src/FormWrapper"
 
 type UserData = {
   firstName: string;
